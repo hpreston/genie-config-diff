@@ -1,0 +1,117 @@
+[2019-06-03 15:40:31,451] +++ iosxr logfile gold_config/connection_iosxr.txt +++
+[2019-06-03 15:40:31,453] +++ Unicon plugin iosxr +++
+Password: 
+[2019-06-03 15:40:39,198] +++ connection to spawn: ssh -l admin 64.103.37.3 -p 8181, id: 4541116992 +++
+[2019-06-03 15:40:39,198] connection to iosxr
+
+
+
+RP/0/RP0/CPU0:iosxr#
+[2019-06-03 15:40:53,231] +++ initializing handle +++
+[2019-06-03 15:40:53,232] +++ iosxr: executing command 'terminal length 0' +++
+terminal length 0
+Mon Jun  3 19:13:45.636 UTC
+RP/0/RP0/CPU0:iosxr#
+[2019-06-03 15:40:53,748] +++ iosxr: executing command 'terminal width 0' +++
+terminal width 0
+Mon Jun  3 19:13:46.151 UTC
+RP/0/RP0/CPU0:iosxr#
+[2019-06-03 15:40:54,256] +++ iosxr: config +++
+configure terminal
+Mon Jun  3 19:13:46.660 UTC
+RP/0/RP0/CPU0:iosxr(config)#no logging console
+RP/0/RP0/CPU0:iosxr(config)#line console
+RP/0/RP0/CPU0:iosxr(config-line)#exec-timeout 0 0
+RP/0/RP0/CPU0:iosxr(config-line)#absolute-timeout 0
+RP/0/RP0/CPU0:iosxr(config-line)#session-timeout 0
+RP/0/RP0/CPU0:iosxr(config-line)#line default
+RP/0/RP0/CPU0:iosxr(config-line)#exec-timeout 0 0
+RP/0/RP0/CPU0:iosxr(config-line)#absolute-timeout 0
+RP/0/RP0/CPU0:iosxr(config-line)#session-timeout 0
+RP/0/RP0/CPU0:iosxr(config-line)#commit
+Mon Jun  3 19:13:53.945 UTC
+RP/0/RP0/CPU0:iosxr(config-line)#end
+RP/0/RP0/CPU0:iosxr#
+[2019-06-03 15:41:03,332] +++ iosxr: executing command 'show running-config' +++
+show running-config
+Mon Jun  3 19:13:55.742 UTC
+Building configuration...
+!! IOS XR Configuration version = 6.5.2
+!! Last configuration change at Mon Jun  3 19:13:53 2019 by admin
+!
+hostname iosxr
+domain name abc.inc
+username admin
+ group root-lr
+ group cisco-support
+ secret 5 $1$k7Sg$3/RgUwUsA2x74RY0mwVlH1
+!
+tpa
+ vrf default
+  address-family ipv4
+   default-route mgmt
+  !
+ !
+!
+line console
+ exec-timeout 0 0
+ absolute-timeout 0
+ session-timeout 0
+!
+line default
+ exec-timeout 0 0
+ absolute-timeout 0
+ session-timeout 0
+ transport input ssh
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 10.10.20.175 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/1
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/2
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/3
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/4
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/5
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0/6
+ ipv6 enable
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 10.10.20.254
+ !
+!
+xml agent tty
+ iteration off
+!
+netconf agent tty
+!
+netconf-yang agent
+ ssh
+!
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+end
+
+RP/0/RP0/CPU0:iosxr#

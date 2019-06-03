@@ -1,0 +1,77 @@
+{
+  "Building configuration...": {},
+  "Mon Jun  3 19:13:55.742 UTC": {},
+  "call-home": {
+    "contact smart-licensing": {},
+    "profile CiscoTAC-1": {
+      "active": {},
+      "destination transport-method http": {}
+    },
+    "service active": {}
+  },
+  "domain name abc.inc": {},
+  "end": {},
+  "hostname iosxr": {},
+  "interface GigabitEthernet0/0/0/0": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/1": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/2": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/3": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/4": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/5": {
+    "ipv6 enable": {}
+  },
+  "interface GigabitEthernet0/0/0/6": {
+    "ipv6 enable": {}
+  },
+  "interface MgmtEth0/RP0/CPU0/0": {
+    "ipv4 address 10.10.20.175 255.255.255.0": {}
+  },
+  "line console": {
+    "absolute-timeout 0": {},
+    "exec-timeout 0 0": {},
+    "session-timeout 0": {}
+  },
+  "line default": {
+    "absolute-timeout 0": {},
+    "exec-timeout 0 0": {},
+    "session-timeout 0": {},
+    "transport input ssh": {}
+  },
+  "netconf agent tty": {},
+  "netconf-yang agent": {
+    "ssh": {}
+  },
+  "router static": {
+    "address-family ipv4 unicast": {
+      "0.0.0.0/0 10.10.20.254": {}
+    }
+  },
+  "ssh server netconf vrf default": {},
+  "ssh server v2": {},
+  "ssh server vrf default": {},
+  "tpa": {
+    "vrf default": {
+      "address-family ipv4": {
+        "default-route mgmt": {}
+      }
+    }
+  },
+  "username admin": {
+    "group cisco-support": {},
+    "group root-lr": {},
+    "secret 5 $1$k7Sg$3/RgUwUsA2x74RY0mwVlH1": {}
+  },
+  "xml agent tty": {
+    "iteration off": {}
+  }
+}
