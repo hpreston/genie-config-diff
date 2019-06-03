@@ -1,4 +1,6 @@
 # genie-config-diff
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/hpreston/genie-config-diff)
+
 One of the most common questions network engineers have to figure out is "What configuration changed?".  [Genie](https://developer.cisco.com/pyats) from Cisco makes answering this question super easy.  And as a bonus, it can do far as well! 
 
 In this repo will provide you a quick example walkthrough how you can use this tool in your own environment.  
