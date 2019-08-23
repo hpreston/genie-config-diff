@@ -35,7 +35,7 @@ devices:
         ip: "sbx-nxos-mgmt.cisco.com"
         port: "8181"
 
-  iosxr:
+  iosxr1:
     os: iosxr
     type: iosxr
     tacacs:
